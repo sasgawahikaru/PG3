@@ -11,6 +11,7 @@ int main() {
 	int n = 100;
 	int result;
 
+
 	result = Recursive(n);
 	printf("%d‚ÌŠKæ = %d\n", n,result);
 
