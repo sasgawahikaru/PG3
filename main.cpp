@@ -1,63 +1,33 @@
-#include<stdio.h>
 #include<stdlib.h>
-#include<time.h>
-#include<windows.h>
+#include<list>
+#include<vector>
 
-typedef void (*PFunc)(int*);
+using namespace std;
 
-int i;
-void callback(int* s)
-{
-
-	for (int a = 0; a < 1; a++)
-		srand((unsigned int)time(NULL));
-	{
-		int num = rand() % 6 + 1;
-		printf("%d\n", num);
-		if (i % 2 == 0)
-		{
-			if (num % 2 == 0)
-			{
-				printf("偶数\n");
-				printf("当たり");
-			}
-			else
-			{
-				printf("奇数\n");
-				printf("外れ");
-			}
-		}
-		if (i % 2 == 1)
-		{
-			if (num % 2 == 0)
-			{
-				printf("偶数\n");
-				printf("外れ");
-			}
-			else
-			{
-				printf("奇数\n");
-				printf("当たり");
-			}
-		}
-	}
-}
-void setTimeout(PFunc p, int second)
-{
-	Sleep(second * 1000);
-
-	p(&second);
-}
 int main()
 {
 
-	printf("偶数だと思うなら0,2,4,6,8を 奇数だと思うなら1,3,5,7,9を押してENTER\n");
-	scanf_s("%d", &i);
-	PFunc p;
-	p = callback;
-	setTimeout(p, 3);
+	std::list<int>{1, 2, 3};
+	//vector<int>b;
+
+	//b.push_back(40);
+	//b.push_back(50);
+	//b.push_back(77);
+
+	//int size = b.size();
+	//for (int i = 0; i < size; i++)
+	//{
+	//	printf("%d\n", b[i]);
+	//}
+
+	system("pause");
 	return 0;
 }
+
+
+
+
+
 
 //template<typename Type>
 //Type add(Type a, Type b) {
