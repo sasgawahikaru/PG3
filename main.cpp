@@ -1,21 +1,62 @@
 #include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+#include<windows.h>
 
-int Recursive(int n) {
-	if (n <= 1) {
-		return 1;
+typedef void (*PFunc)(int*);
+
+int i;
+void callback(int* s)
+{
+
+	for (int a = 0; a < 1; a++)
+		srand((unsigned int)time(NULL));
+	{
+		int num = rand() % 6 + 1;
+		printf("%d\n", num);
+		if (i % 2 == 0)
+		{
+			if (num % 2 == 0)
+			{
+				printf("偶数\n");
+				printf("当たり");
+			}
+			else
+			{
+				printf("奇数\n");
+				printf("外れ");
+			}
+		}
+		if (i % 2 == 1)
+		{
+			if (num % 2 == 0)
+			{
+				printf("偶数\n");
+				printf("外れ");
+			}
+			else
+			{
+				printf("奇数\n");
+				printf("当たり");
+			}
+		}
 	}
-	return (n * 2 - 50);
 }
+void setTimeout(PFunc p, int second)
+{
+	Sleep(second * 1000);
 
-int main() {
-	int n = 100;
-	int result;
+	p(&second);
+}
+int main()
+{
 
-
-	result = Recursive(n);
-	printf("%dの階乗 = %d\n", n,result);
-
-	return (0);
+	printf("偶数だと思うなら0,2,4,6,8を 奇数だと思うなら1,3,5,7,9を押してENTER\n");
+	scanf_s("%d", &i);
+	PFunc p;
+	p = callback;
+	setTimeout(p, 3);
+	return 0;
 }
 
 //template<typename Type>
