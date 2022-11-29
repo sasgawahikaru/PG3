@@ -40,6 +40,26 @@ int main()
 		if (strcmp( *itr,"Tabata")==0)
 		{
 			stations.insert(itr, "Nishi-Nippori");
+			stations.push_back("Komagome");
+			stations.push_back("Sugamo");
+			stations.push_back("Otsuka");
+			stations.push_back("Ikebukuro");
+			stations.push_back("Mejiro");
+			stations.push_back("Takadanobaba");
+			stations.push_back("Shin-Okubo");
+			stations.push_back("Shinjuku");
+			stations.push_back("Yoyogi");
+			stations.push_back("Harajuku");
+			stations.push_back("Shibuya");
+			stations.push_back("Ebisu");
+			stations.push_back("Meguro");
+			stations.push_back("Gotanda");
+			stations.push_back("Osaki");
+			stations.push_back("Shinagawa");
+			stations.push_back("Tamachi");
+			stations.push_back("Hamamatsucho");
+			stations.push_back("Shimbashi");
+			stations.push_back("Yurakucho");
 			break;
 		}
 	}
@@ -54,20 +74,17 @@ int main()
 	for (auto itr = stations.begin(); itr != stations.end(); itr++)
 	{
 		//if (*itr == "Tabata")
-		if (strcmp(*itr, "Tokyo") == 0)
+		if (strcmp(*itr, "Tabata") == 0)
 		{
-			stations.push_front("Yurakutyou");
-			stations.push_front("Shimbashi");
-			stations.push_front("Hamamatsucho");
-			stations.push_front("Tamachi");
 			break;
 		}
 	}
-	for (auto itr = stations.begin(); itr != stations.end(); ++itr)
+	for (auto itr = stations.begin(); itr != stations.end(); itr++)
 	{
 		if (strcmp(*itr, "Tamachi") == 0)
 		{
-			stations.insert(itr, "Takanawa-Gateway");
+			itr = stations.insert(itr, "Takanawa-Gateway");
+			itr++;
 		}
 	}
 	/////////////////
