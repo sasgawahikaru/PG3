@@ -26,9 +26,14 @@ int main()
 	{
 		"Tokyo","Kanda","Akihabara",
 		"Okachimachi","Ueno","Uguisudani",
-		"Nippori","Tabata",
-	};
+		"Nippori","Tabata","Komagome","Sugamo",
+		"Otsuka","Ikebukuro","Mejiro","Takadanobaba",
+		"Shin-Okubo","Shinjuku","Yoyogi","Harajuku",
+		"Shibuya","Ebisu","Meguro","Gotanda",
+		"Osaki","Shinagawa","Tamachi","Hamamatsucho",
+		"Shimbashi","Yurakucho"
 
+	};
 	printf("--- 1970 ---\n");
 	for (auto itr = stations.begin(); itr != stations.end(); itr++)
 	{
@@ -40,26 +45,7 @@ int main()
 		if (strcmp( *itr,"Tabata")==0)
 		{
 			stations.insert(itr, "Nishi-Nippori");
-			stations.push_back("Komagome");
-			stations.push_back("Sugamo");
-			stations.push_back("Otsuka");
-			stations.push_back("Ikebukuro");
-			stations.push_back("Mejiro");
-			stations.push_back("Takadanobaba");
-			stations.push_back("Shin-Okubo");
-			stations.push_back("Shinjuku");
-			stations.push_back("Yoyogi");
-			stations.push_back("Harajuku");
-			stations.push_back("Shibuya");
-			stations.push_back("Ebisu");
-			stations.push_back("Meguro");
-			stations.push_back("Gotanda");
-			stations.push_back("Osaki");
-			stations.push_back("Shinagawa");
-			stations.push_back("Tamachi");
-			stations.push_back("Hamamatsucho");
-			stations.push_back("Shimbashi");
-			stations.push_back("Yurakucho");
+			
 			break;
 		}
 	}
@@ -71,14 +57,7 @@ int main()
 	{
 		printf("%s\n", *itr);
 	}
-	for (auto itr = stations.begin(); itr != stations.end(); itr++)
-	{
-		//if (*itr == "Tabata")
-		if (strcmp(*itr, "Tabata") == 0)
-		{
-			break;
-		}
-	}
+
 	for (auto itr = stations.begin(); itr != stations.end(); itr++)
 	{
 		if (strcmp(*itr, "Tamachi") == 0)
@@ -97,51 +76,3 @@ int main()
 	}
 	return 0;
 }
-
-/*vector<int>e = { 1,2,3 };
-
-vector<int>::iterator it;
-
-it = e.begin();
-
-cout << *it << endl;
-
-it++;
-
-cout << *it << endl;*/
-
-//std::list<int>lst(33, 4);
-//std::list<int>::iterator itr;
-//itr = lst.begin();
-//itr = lst.end();
-//itr--;
-//itr--;
-
-//std::list<int>lst;
-//for (auto itr = lst.begin(); itr != lst.end(); ++itr)
-//{
-//	std::cout << *itr << "\n";
-//}
-
-//list<int>lst{ 114,514,364 };
-//lst.push_front(7);
-//lst.push_back(777);
-//for (int i = 0; i < 5; i++)
-//{
-//	lst.push_front(i);
-//}
-//for (int i = 0; i < 5; i++)
-//{
-//	lst.push_back(i);
-//}
-
-//list<int>list{ 1,3,5,7,10 };
-//for (std::list<int>::iterator itr = list.begin(); itr != list.end(); ++itr)
-//{
-//	if (*itr == 3)
-//	{
-//		itr = list.insert(itr, 0);
-//		++itr;
-//	}
-//}
-//printf("%f", list);
