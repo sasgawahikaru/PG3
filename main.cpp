@@ -39,24 +39,26 @@ int main()
 	{
 		printf("%s\n", *itr);
 	}
-	for (auto itr = stations.begin(); itr != stations.end(); itr++)
-	{
-		//if (*itr == "Tabata")
-		if (strcmp( *itr,"Tabata")==0)
-		{
-			stations.insert(itr, "Nishi-Nippori");
-			
-			break;
-		}
-	}
 	/////////////////
 	//1971”N"Nishi-Nippori"’Ç‰Á
 	//"tabata"‚ð’T‚µ’Ç‰Á‚·‚é
+	for (auto itr = stations.begin(); itr != stations.end(); itr++)
+	{
+		if (strcmp(*itr, "Tabata") == 0)
+		{
+			stations.insert(itr, "Nishi-Nippori");
+
+			break;
+		}
+	}
 	printf("--- 2019 ---\n");
 	for (auto itr = stations.begin(); itr != stations.end(); ++itr)
 	{
 		printf("%s\n", *itr);
 	}
+	/////////////////
+	//2020"Takanawa-Gateway"’Ç‰Á
+	//"Tamachi"‚ð’T‚µ’Ç‰Á‚·‚é
 
 	for (auto itr = stations.begin(); itr != stations.end(); itr++)
 	{
@@ -66,9 +68,6 @@ int main()
 			itr++;
 		}
 	}
-	/////////////////
-	//2020"Takanawa-Gateway"’Ç‰Á
-	//"Tamachi"‚ð’T‚µ’Ç‰Á‚·‚é
 	printf("--- 2022 ---\n");
 	for (auto itr = stations.begin(); itr != stations.end(); itr++)
 	{
