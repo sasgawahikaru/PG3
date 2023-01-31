@@ -1,36 +1,36 @@
 #include<stdio.h>
-#include <iostream>
-#include "Enemy.h"
-using namespace std;
+#include<stdlib.h>
+#include<time.h>
+#include<windows.h>
+#include<functional>
+#include<vector>
+#include<list>
+#include<string>
+#include"test.h"
 
 int main()
 {
-	Enemy enemy1;
-	Enemy enemy2;
-	Enemy enemy3;
+	int ChangeScene = 0;
+	int sceneNo = ChangeScene;
+	printf("0~3‚ð“ü—Í‚µ‚Ä‚­‚¾‚³‚¢,‚»‚êˆÈŠO‚ÍI—¹\n");
+	scanf_s("%d", &ChangeScene);
 
-	enemy1.Draw();
-	enemy2.Draw();
-	enemy3.Draw();
-	printf("---\n");
+	//	printf("%d",val);
 
-	enemy2.SetDeath();
-	printf("“G‚ÍˆêlŽ€‚ñ‚¾\n");
-	printf("---\n");
-
-	enemy1.Draw();
-	enemy2.Draw();
-	enemy3.Draw();
-	printf("---\n");
-
-	enemy1.Update();
-	enemy2.Update();
-	enemy3.Update();
-	printf("---\n");
-	enemy1.Draw();
-	enemy2.Draw();
-	enemy3.Draw();
-	printf("---\n");
+	if (ChangeScene == 0) {
+		TestSingleton::GetInstance()->SceneManager0();
+	}
+	if (ChangeScene == 1) {
+		TestSingleton::GetInstance()->SceneManager1();
+	}
+	if (ChangeScene == 2) {
+		TestSingleton::GetInstance()->SceneManager2();
+	}
+	if (ChangeScene == 3) {
+		TestSingleton::GetInstance()->SceneManager3();
+	}
+	//	TestSingleton*p=TestSingleton::GetInstance();
+	//	p->Hello();
 	return 0;
 
 }
