@@ -1,36 +1,36 @@
 #include<stdio.h>
-#include<stdlib.h>
-#include<time.h>
-#include<windows.h>
-#include<functional>
-#include<vector>
-#include<list>
-#include<string>
-#include"test.h"
+#include <iostream>
+#include "Enemy.h"
+using namespace std;
 
 int main()
 {
-	int ChangeScene = 0;
-	int sceneNo = ChangeScene;
-		printf("0~3‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢,‚»‚êˆÈŠO‚ÍI—¹\n");
-		scanf_s("%d", &ChangeScene);
+	Enemy enemy1;
+	Enemy enemy2;
+	Enemy enemy3;
 
-		//	printf("%d",val);
+	enemy1.Draw();
+	enemy2.Draw();
+	enemy3.Draw();
+	printf("---\n");
 
-		if (ChangeScene == 0) {
-			TestSingleton::GetInstance()->SceneManager0();
-		}
-		if (ChangeScene == 1) {
-			TestSingleton::GetInstance()->SceneManager1();
-		}
-		if (ChangeScene == 2) {
-			TestSingleton::GetInstance()->SceneManager2();
-		}
-		if (ChangeScene == 3) {
-			TestSingleton::GetInstance()->SceneManager3();
-		}
-		//	TestSingleton*p=TestSingleton::GetInstance();
-		//	p->Hello();
-		return 0;
-	
+	enemy2.SetDeath();
+	printf("“G‚Íˆêl€‚ñ‚¾\n");
+	printf("---\n");
+
+	enemy1.Draw();
+	enemy2.Draw();
+	enemy3.Draw();
+	printf("---\n");
+
+	enemy1.Update();
+	enemy2.Update();
+	enemy3.Update();
+	printf("---\n");
+	enemy1.Draw();
+	enemy2.Draw();
+	enemy3.Draw();
+	printf("---\n");
+	return 0;
+
 }
