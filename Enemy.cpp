@@ -1,45 +1,49 @@
 #include"Enemy.h"
 #include<stdio.h>
 
-bool Enemy::isAllAlive = false;
+void (Enemy::* Enemy::pFuncTable[])() =
+{
+	&Enemy::Approach,
+	&Enemy::Shoot,
+	&Enemy::GetAway,
+};
+
 Enemy::Enemy()
 {
-	isAlive = true;
-	isAllAlive = true;
+	phase_ = 0;
 }
-
 Enemy::~Enemy()
+{}
+
+void Enemy::Approach()
 {
+	printf("‹ß‚Ã‚­\n");
 }
 
-bool Enemy::IsAlive()
+void Enemy::Shoot()
 {
-	return isAlive;
+	printf("ŽËŒ‚\n");
 }
 
-void Enemy::SetDeath()
+void Enemy::GetAway()
 {
-	isAlive = false;
-	isAllAlive = false;
+	printf("“¦‚°‚é\n");
 }
-
 void Enemy::Update()
 {
-	if (isAllAlive==false)
-	{
-		isAlive = false;
+	printf("phase_:%d\n", phase_);
 
-	}
+	(this->*pFuncTable[phase_])();
+
+	phase_++;
+	
+	if (phase_>2)
+		{
+			phase_ = 0;
+		}
 }
 
 void Enemy::Draw()
 {
-	if (IsAlive())
-	{
-		printf("“G‚Ì•\Ž¦\n");
-	}
-	if(isAlive==false)
-	{
-		printf("Ž€‚ñ‚Å‚¢‚é\n");
-	}
+	printf("(enemy Draw)\n");
 }

@@ -5,14 +5,15 @@ public:
 	Enemy();
 	~Enemy();
 
-	bool IsAlive();
-	void SetDeath();
+public:
+	void Approach();
+	void Shoot();
+	void GetAway();
 
 	void Update();
 	void Draw();
-public:
-	static bool isAllAlive;
+
 private:
-	bool isAlive;
-		//	static int enemyCount;
+	static void (Enemy::* pFuncTable[])();
+	int phase_;
 };
