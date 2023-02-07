@@ -3,17 +3,17 @@
 
 int main()
 {
-	//Circle circle;
+	Circle circle;
 
-	//circle.size();
-	//circle.draw();
+	circle.size();
+	circle.draw();
 
-	//Rectangle rectangle;
+	Rectangle rectangle;
 
-	//rectangle.size();
-	//rectangle.draw();
+	rectangle.size();
+	rectangle.draw();
 
-	IShape* shape[5]{};
+	/*IShape* shape[5]{};
 	shape[0] = new Circle();
 	shape[1] = new Circle();
 	shape[2] = new Rectangle();
@@ -28,7 +28,7 @@ int main()
 	for (auto p : shape)
 	{
 		delete p;
-	}
+	}*/
 	return 0;
 
 }
