@@ -9,14 +9,6 @@
 
 int main()
 {
-///	int ChangeScene = 0;
-	//int sceneNo = ChangeScene;
-	//printf("0~3‚ð“ü—Í‚µ‚Ä‚­‚¾‚³‚¢,‚»‚êˆÈŠO‚ÍI—¹\n");
-	//scanf_s("%d", &ChangeScene);
-
-	//	printf("%d",val);
-
-//	if (ChangeScene == 0) {
 	int input;
 	int scene = 0;
 	while (true)
@@ -31,11 +23,6 @@ int main()
 			scene = 0;
 		}
 	}
-//	}
-
-
-	//	TestSingleton*p=TestSingleton::GetInstance();
-	//	p->Hello();
 	return 0;
 
 }
