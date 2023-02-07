@@ -1,6 +1,7 @@
 #include "Enemy.h"
 #include <stdio.h>
 
+
 int main()
 {
 	Enemy enemy;

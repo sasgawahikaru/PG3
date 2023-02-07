@@ -1,6 +1,7 @@
 #include"Enemy.h"
 #include<stdio.h>
 
+
 void (Enemy::* Enemy::pFuncTable[])() =
 {
 	&Enemy::Approach,
