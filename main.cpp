@@ -1,27 +1,33 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<time.h>
-#include<windows.h>
-#include<functional>
-#include<vector>
-#include<string>
-#include"test.h"
+#include"Circle.h"
+#include"Rectangle.h"
 
 int main()
 {
-	int input;
-	int scene = 0;
-	while (true)
+	//Circle circle;
+
+	//circle.size();
+	//circle.draw();
+
+	//Rectangle rectangle;
+
+	//rectangle.size();
+	//rectangle.draw();
+
+	IShape* shape[5]{};
+	shape[0] = new Circle();
+	shape[1] = new Circle();
+	shape[2] = new Rectangle();
+	shape[3] = new Circle();
+	shape[4] = new Rectangle();
+
+	for (int i = 0; i < 5; i++)
 	{
-		printf("0:text 1:continue ==>");
-		scanf_s("%d", &input);
-		if (input == 0)break;
-		TestSingleton::GetInstance()->ChangeScene(scene);
-		scene += 1;
-		if (scene == 4)
-		{
-			scene = 0;
-		}
+		shape[i]->size();
+		shape[i]->draw();
+	}
+	for (auto p : shape)
+	{
+		delete p;
 	}
 	return 0;
 
