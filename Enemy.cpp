@@ -36,11 +36,11 @@ void Enemy::Update()
 	(this->*pFuncTable[phase_])();
 
 	phase_++;
-	
-	if (phase_>2)
-		{
-			phase_ = 0;
-		}
+
+	if (phase_ > 2)
+	{
+		phase_ = 0;
+	}
 }
 
 void Enemy::Draw()
